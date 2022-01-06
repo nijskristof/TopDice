@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity" >
+        tools:context=".DiceActivity" >
     <ImageView
             android:layout_width="176dp"
             android:layout_height="155dp" app:srcCompat="@drawable/d1" android:id="@+id/dice"
@@ -24,12 +24,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/amoutRolesText"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dice" app:layout_constraintBottom_toTopOf="@+id/roleButton"/>
+            app:layout_constraintTop_toBottomOf="@+id/dice" app:layout_constraintBottom_toTopOf="@+id/roleButton"
+            android:textSize="24sp"/>
     <Button
             android:text="@string/reset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/resetButton"
             app:layout_constraintTop_toBottomOf="@+id/roleButton"
-            android:layout_marginTop="16dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
+    <Spinner
+            android:id="@+id/diceTypeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="64dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="48dp"
+            android:layout_marginEnd="48dp" android:minHeight="48dp"
+            app:layout_constraintStart_toEndOf="@+id/maxValueDice" android:layout_marginLeft="256dp"
+            android:layout_marginStart="256dp"/>
+    <TextView
+            android:text="@string/maxValueDice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/maxValueDice"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="64dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="48dp" android:layout_marginStart="48dp" android:textSize="32sp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,18 +1,18 @@
 package com.wodanix.topdice;
 
 
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+public class DiceActivity extends AppCompatActivity {
     private ImageView dice;
     private int counter;
     private TextView amountRolesText;
+    private int diceType = 6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +23,50 @@ public class MainActivity extends AppCompatActivity {
         Button roleButton = findViewById(R.id.roleButton);
         Button resetButton = findViewById(R.id.resetButton);
         amountRolesText = findViewById(R.id.amoutRolesText);
+        Spinner diceTypeSpinner = findViewById(R.id.diceTypeSpinner);
+        ArrayAdapter<CharSequence> diceTypeAdapter = ArrayAdapter.createFromResource(this, R.array.diceTypes, R.layout.support_simple_spinner_dropdown_item);
+        diceTypeSpinner.setAdapter(diceTypeAdapter);
+        diceTypeSpinner.setSelection(1);
 
-        roleButton.setOnClickListener(view -> roleDices(6));
+        roleButton.setOnClickListener(view -> roleDices(diceType));
         resetButton.setOnClickListener(view -> resetCounter());
+        diceTypeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
+                String valueSelected = diceTypeAdapter.getItem(position).toString();
+                switch(valueSelected){
+                    case "D4":
+                        diceType = 4;
+                        break;
+                    case "D6":
+                        diceType = 6;
+                        break;
+                    case "D8":
+                        diceType = 8;
+                        break;
+                    case "D10":
+                        diceType = 10;
+                        break;
+                    case "D12":
+                        diceType = 12;
+                        break;
+                    case "D16":
+                        diceType = 16;
+                        break;
+                    case "D20":
+                        diceType = 20;
+                        break;
+                    case "D100":
+                        diceType = 100;
+                        break;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                diceType = 6;
+            }
+        });
     }
 
     private void resetCounter() {

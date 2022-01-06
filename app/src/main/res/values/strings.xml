@@ -3,5 +3,15 @@
     <string name="dice_image">Dice image</string>
     <string name="role">Role</string>
     <string name="reset">Reset</string>
+    <string name="maxValueDice">dice type</string>
     <string name="counter">"you roled the dice 0 times"</string>
+    <string-array name="diceTypes">
+        <item>D4</item>
+        <item>D6</item>
+        <item>D8</item>
+        <item>D10</item>
+        <item>D12</item>
+        <item>D20</item>
+        <item>D100</item>
+    </string-array>
 </resources>
