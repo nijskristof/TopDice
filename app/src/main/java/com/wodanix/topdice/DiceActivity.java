@@ -80,7 +80,7 @@ public class DiceActivity extends AppCompatActivity {
 
     private void roleDices(int max) {
         int number = generateNumber(max);
-        setDiceView(number);
+        setDiceView(number, max);
         addCounter();
     }
 
@@ -89,7 +89,7 @@ public class DiceActivity extends AppCompatActivity {
         setCounterText();
     }
 
-    private void setDiceView(int number) {
+    private void setDiceView(int number, int max) {
         switch (number){
             case 1:
                 dice.setImageResource(R.drawable.d1);
