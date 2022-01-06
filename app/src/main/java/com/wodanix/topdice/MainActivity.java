@@ -1,10 +1,9 @@
 package com.wodanix.topdice;
 
 
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import androidx.annotation.DrawableRes;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -12,6 +11,8 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     private ImageView dice;
+    private int counter;
+    private TextView amountRolesText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         dice = findViewById(R.id.dice);
         Button roleButton = findViewById(R.id.buttonRole);
+        amountRolesText = findViewById(R.id.amoutRolesText);
 
 
         roleButton.setOnClickListener(view -> roleDices(6));
@@ -28,6 +30,12 @@ public class MainActivity extends AppCompatActivity {
     private void roleDices(int max) {
         int number = generateNumber(max);
         setDiceView(number);
+        addCounter();
+    }
+
+    private void addCounter() {
+        counter++;
+        amountRolesText.setText(String.format("you roled the dice %s times", counter));
     }
 
     private void setDiceView(int number) {
