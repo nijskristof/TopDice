@@ -20,11 +20,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         dice = findViewById(R.id.dice);
-        Button roleButton = findViewById(R.id.buttonRole);
+        Button roleButton = findViewById(R.id.roleButton);
+        Button resetButton = findViewById(R.id.resetButton);
         amountRolesText = findViewById(R.id.amoutRolesText);
 
-
         roleButton.setOnClickListener(view -> roleDices(6));
+        resetButton.setOnClickListener(view -> resetCounter());
+    }
+
+    private void resetCounter() {
+        counter = 0;
+        setCounterText();
+    }
+
+    private void setCounterText() {
+        amountRolesText.setText(String.format("you roled the dice %s times", counter));
     }
 
     private void roleDices(int max) {
@@ -35,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void addCounter() {
         counter++;
-        amountRolesText.setText(String.format("you roled the dice %s times", counter));
+        setCounterText();
     }
 
     private void setDiceView(int number) {

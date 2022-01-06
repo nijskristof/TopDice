@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity" android:id="@+id/roleButton">
+        tools:context=".MainActivity" >
     <ImageView
             android:layout_width="176dp"
             android:layout_height="155dp" app:srcCompat="@drawable/d1" android:id="@+id/dice"
@@ -15,7 +15,7 @@
     <Button
             android:text="@string/role"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/buttonRole"
+            android:layout_height="wrap_content" android:id="@+id/roleButton"
             app:layout_constraintTop_toBottomOf="@+id/dice"
             android:layout_marginTop="64dp" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
@@ -24,5 +24,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/amoutRolesText"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dice" app:layout_constraintBottom_toTopOf="@+id/buttonRole"/>
+            app:layout_constraintTop_toBottomOf="@+id/dice" app:layout_constraintBottom_toTopOf="@+id/roleButton"/>
+    <Button
+            android:text="@string/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/resetButton"
+            app:layout_constraintTop_toBottomOf="@+id/roleButton"
+            android:layout_marginTop="16dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

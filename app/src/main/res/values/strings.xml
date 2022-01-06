@@ -2,5 +2,6 @@
     <string name="app_name">TopDice</string>
     <string name="dice_image">Dice image</string>
     <string name="role">Role</string>
+    <string name="reset">Reset</string>
     <string name="counter">"you roled the dice 0 times"</string>
 </resources>
