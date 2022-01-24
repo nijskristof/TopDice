@@ -92,55 +92,115 @@ public class DiceActivity extends AppCompatActivity {
     private void setDiceView(int number, int max) {
         switch (number) {
             case 1:
-                if (max == 4 || max == 8) {
+                if (max == 4 || max == 8 || max == 20) {
                     dice.setImageResource(R.drawable.d4_1);
                 } else {
                     dice.setImageResource(R.drawable.d1);
                 }
                 break;
             case 2:
-                if (max == 4 || max == 8) {
+                if (max == 4 || max == 8 || max == 20) {
                     dice.setImageResource(R.drawable.d4_2);
                 } else {
                     dice.setImageResource(R.drawable.d2);
                 }
                 break;
             case 3:
-                if (max == 4 || max == 8) {
+                if (max == 4 || max == 8 || max == 20) {
                     dice.setImageResource(R.drawable.d4_3);
                 } else {
                     dice.setImageResource(R.drawable.d3);
                 }
                 break;
             case 4:
-                if (max == 4 || max == 8) {
+                if (max == 4 || max == 8 || max == 20) {
                     dice.setImageResource(R.drawable.d4_4);
                 } else {
                     dice.setImageResource(R.drawable.d4);
                 }
                 break;
             case 5:
-                if (max == 8) {
+                if (max == 8 || max == 20) {
                     dice.setImageResource(R.drawable.d8_5);
                 } else {
                     dice.setImageResource(R.drawable.d5);
                 }
                 break;
             case 6:
-                if (max == 8) {
+                if (max == 8 || max == 20) {
                     dice.setImageResource(R.drawable.d8_6);
                 } else {
                     dice.setImageResource(R.drawable.d6);
                 }
                 break;
             case 7:
-                if(max == 8){
+                if(max == 8 || max == 20){
                     dice.setImageResource(R.drawable.d8_7);
                 }
                 break;
             case 8:
-                if(max == 8){
+                if(max == 8 || max == 20){
                     dice.setImageResource(R.drawable.d8_8);
+                }
+                break;
+            case 9:
+                if(max == 20){
+                    dice.setImageResource(R.drawable.d20_9);
+                }
+                break;
+            case 10:
+                if(max == 20){
+                    dice.setImageResource(R.drawable.d20_10);
+                }
+                break;
+            case 11:
+                if(max == 20){
+                    dice.setImageResource(R.drawable.d20_11);
+                }
+                break;
+            case 12:
+                if(max == 20){
+                    dice.setImageResource(R.drawable.d20_12);
+                }
+                break;
+            case 13:
+                if(max == 20){
+                    dice.setImageResource(R.drawable.d20_13);
+                }
+                break;
+            case 14:
+                if(max == 20){
+                    dice.setImageResource(R.drawable.d20_14);
+                }
+                break;
+            case 15:
+                if(max == 20){
+                    dice.setImageResource(R.drawable.d20_15);
+                }
+                break;
+            case 16:
+                if(max == 20){
+                    dice.setImageResource(R.drawable.d20_16);
+                }
+                break;
+            case 17:
+                if(max == 20){
+                    dice.setImageResource(R.drawable.d20_17);
+                }
+                break;
+            case 18:
+                if(max == 20){
+                    dice.setImageResource(R.drawable.d20_18);
+                }
+                break;
+            case 19:
+                if(max == 20){
+                    dice.setImageResource(R.drawable.d20_19);
+                }
+                break;
+            case 20:
+                if(max == 20){
+                    dice.setImageResource(R.drawable.d20_20);
                 }
                 break;
         }
