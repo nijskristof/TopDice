@@ -34,7 +34,7 @@ public class DiceActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
                 String valueSelected = diceTypeAdapter.getItem(position).toString();
-                switch(valueSelected){
+                switch (valueSelected) {
                     case "D4":
                         diceType = 4;
                         break;
@@ -75,7 +75,7 @@ public class DiceActivity extends AppCompatActivity {
     }
 
     private void setCounterText() {
-        amountRolesText.setText(String.format("you roled the dice %s times", counter));
+        amountRolesText.setText(String.format("you rolled the dice %s times", counter));
     }
 
     private void roleDices(int max) {
@@ -90,24 +90,58 @@ public class DiceActivity extends AppCompatActivity {
     }
 
     private void setDiceView(int number, int max) {
-        switch (number){
+        switch (number) {
             case 1:
-                dice.setImageResource(R.drawable.d1);
+                if (max == 4 || max == 8) {
+                    dice.setImageResource(R.drawable.d4_1);
+                } else {
+                    dice.setImageResource(R.drawable.d1);
+                }
                 break;
             case 2:
-                dice.setImageResource(R.drawable.d2);
+                if (max == 4 || max == 8) {
+                    dice.setImageResource(R.drawable.d4_2);
+                } else {
+                    dice.setImageResource(R.drawable.d2);
+                }
                 break;
             case 3:
-                dice.setImageResource(R.drawable.d3);
+                if (max == 4 || max == 8) {
+                    dice.setImageResource(R.drawable.d4_3);
+                } else {
+                    dice.setImageResource(R.drawable.d3);
+                }
                 break;
             case 4:
-                dice.setImageResource(R.drawable.d4);
+                if (max == 4 || max == 8) {
+                    dice.setImageResource(R.drawable.d4_4);
+                } else {
+                    dice.setImageResource(R.drawable.d4);
+                }
                 break;
             case 5:
-                dice.setImageResource(R.drawable.d5);
+                if (max == 8) {
+                    dice.setImageResource(R.drawable.d8_5);
+                } else {
+                    dice.setImageResource(R.drawable.d5);
+                }
                 break;
             case 6:
-                dice.setImageResource(R.drawable.d6);
+                if (max == 8) {
+                    dice.setImageResource(R.drawable.d8_6);
+                } else {
+                    dice.setImageResource(R.drawable.d6);
+                }
+                break;
+            case 7:
+                if(max == 8){
+                    dice.setImageResource(R.drawable.d8_7);
+                }
+                break;
+            case 8:
+                if(max == 8){
+                    dice.setImageResource(R.drawable.d8_8);
+                }
                 break;
         }
     }
