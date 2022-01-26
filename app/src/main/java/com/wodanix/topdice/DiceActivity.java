@@ -94,8 +94,10 @@ public class DiceActivity extends AppCompatActivity {
             case 1:
                 if (max == 4 || max == 8 || max == 20) {
                     dice.setImageResource(R.drawable.d4_1);
-                } else if (max == 10){
+                } else if (max == 10) {
                     dice.setImageResource(R.drawable.d10_1);
+                } else if (max == 12) {
+                    dice.setImageResource(R.drawable.d12_1);
                 } else {
                     dice.setImageResource(R.drawable.d1);
                 }
@@ -105,6 +107,8 @@ public class DiceActivity extends AppCompatActivity {
                     dice.setImageResource(R.drawable.d4_2);
                 } else if (max == 10){
                     dice.setImageResource(R.drawable.d10_2);
+                } else if (max == 12) {
+                    dice.setImageResource(R.drawable.d12_2);
                 } else {
                     dice.setImageResource(R.drawable.d2);
                 }
@@ -114,6 +118,8 @@ public class DiceActivity extends AppCompatActivity {
                     dice.setImageResource(R.drawable.d4_3);
                 } else if (max == 10){
                     dice.setImageResource(R.drawable.d10_3);
+                } else if (max == 12) {
+                    dice.setImageResource(R.drawable.d12_3);
                 } else {
                     dice.setImageResource(R.drawable.d3);
                 }
@@ -123,6 +129,8 @@ public class DiceActivity extends AppCompatActivity {
                     dice.setImageResource(R.drawable.d4_4);
                 } else if (max == 10){
                     dice.setImageResource(R.drawable.d10_4);
+                } else if (max == 12) {
+                    dice.setImageResource(R.drawable.d12_4);
                 } else {
                     dice.setImageResource(R.drawable.d4);
                 }
@@ -132,6 +140,8 @@ public class DiceActivity extends AppCompatActivity {
                     dice.setImageResource(R.drawable.d8_5);
                 } else if (max == 10){
                     dice.setImageResource(R.drawable.d10_5);
+                } else if (max == 12) {
+                    dice.setImageResource(R.drawable.d12_5);
                 } else {
                     dice.setImageResource(R.drawable.d5);
                 }
@@ -141,6 +151,8 @@ public class DiceActivity extends AppCompatActivity {
                     dice.setImageResource(R.drawable.d8_6);
                 } else if (max == 10){
                     dice.setImageResource(R.drawable.d10_6);
+                } else if (max == 12) {
+                    dice.setImageResource(R.drawable.d12_6);
                 } else {
                     dice.setImageResource(R.drawable.d6);
                 }
@@ -150,6 +162,8 @@ public class DiceActivity extends AppCompatActivity {
                     dice.setImageResource(R.drawable.d8_7);
                 } else if (max == 10){
                     dice.setImageResource(R.drawable.d10_7);
+                } else if (max == 12) {
+                    dice.setImageResource(R.drawable.d12_7);
                 }
                 break;
             case 8:
@@ -157,6 +171,8 @@ public class DiceActivity extends AppCompatActivity {
                     dice.setImageResource(R.drawable.d8_8);
                 } else if (max == 10){
                     dice.setImageResource(R.drawable.d10_8);
+                } else if (max == 12) {
+                    dice.setImageResource(R.drawable.d12_8);
                 }
                 break;
             case 9:
@@ -164,6 +180,8 @@ public class DiceActivity extends AppCompatActivity {
                     dice.setImageResource(R.drawable.d20_9);
                 } else if (max == 10){
                     dice.setImageResource(R.drawable.d10_9);
+                } else if (max == 12) {
+                    dice.setImageResource(R.drawable.d12_9);
                 }
                 break;
             case 10:
@@ -171,16 +189,22 @@ public class DiceActivity extends AppCompatActivity {
                     dice.setImageResource(R.drawable.d20_10);
                 } else if (max == 10){
                     dice.setImageResource(R.drawable.d10_10);
+                } else if (max == 12) {
+                    dice.setImageResource(R.drawable.d12_10);
                 }
                 break;
             case 11:
                 if(max == 20){
                     dice.setImageResource(R.drawable.d20_11);
+                } else if (max == 12) {
+                    dice.setImageResource(R.drawable.d12_11);
                 }
                 break;
             case 12:
                 if(max == 20){
                     dice.setImageResource(R.drawable.d20_12);
+                } else if (max == 12) {
+                    dice.setImageResource(R.drawable.d12_12);
                 }
                 break;
             case 13:
